@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="dark">
+<head>
+<script>
+  // Controlled strictly by our C++ host injector before local rendering
+  window.DRIPZONE_EDIT_MODE = false;
+</script>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barber King — BARBER SHOP</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            void: '#030303',
+                            card: '#09090d',
+                            accent: '#FF2D6A', // Pink Cyber Glow
+                            surface: '#12121a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <style>
+        body {
+            background-color: #030303;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        .bg-glow-1 {
+            background: radial-gradient(circle at 50% 50%, rgba(236,72,153,0.08) 0%, rgba(0,0,0,0) 50%);
+        }
+        .bg-glow-2 {
+            background: radial-gradient(circle at 10% 30%, rgba(139,92,246,0.06) 0%, rgba(0,0,0,0) 40%);
+        }
+    </style>
+</head>
+<body class="text-neutral-200 antialiased relative overflow-x-hidden min-h-screen">
+
+    <div class="absolute top-0 left-0 w-full h-full bg-glow-1 pointer-events-none z-0"></div>
+    <div class="absolute top-[30%] left-0 w-full h-full bg-glow-2 pointer-events-none z-0"></div>
+
+    <nav class="border-b border-neutral-900 bg-brand-void/80 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="#" class="flex items-center space-x-3 space-x-reverse">
+                <span class="self-center text-xl font-black tracking-wider text-white">DRIP<span class="text-brand-accent">ZONE</span> STUDIO</span>
+            </a>
+            <div class="hidden w-full md:flex md:w-auto md:order-1" id="navbar-main">
+                <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium md:space-x-8 md:space-x-reverse md:flex-row md:mt-0">
+                    <li><a href="#services" class="text-neutral-400 hover:text-white transition-colors">الخدمات</a></li>
+                    <li><a href="#stats" class="text-neutral-400 hover:text-white transition-colors">الإحصائيات</a></li>
+                    <li><a href="#pricing" class="text-neutral-400 hover:text-white transition-colors">الباقات</a></li>
+                    <li><a href="#team" class="text-neutral-400 hover:text-white transition-colors">الفريق</a></li>
+                    <li><a href="#faq" class="text-neutral-400 hover:text-white transition-colors">الأسئلة الشائعة</a></li>
+                </ul>
+            </div>
+            <div class="flex md:order-2">
+                <a href="tel:+212662112233" class="text-white bg-brand-accent hover:bg-pink-600 font-medium rounded-xl text-sm px-5 py-2.5 shadow-[0_0_20px_rgba(236,72,153,0.3)] transition-all">احجز عبر واتساب</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="max-w-screen-xl mx-auto px-4 py-28 text-center relative z-10">
+        <div data-aos="fade-down" class="space-y-6">
+            <span class="bg-neutral-900/80 text-brand-accent text-xs font-bold px-4 py-1.5 rounded-full border border-neutral-800 tracking-widest uppercase">صالون حلاقة احترافي</span>
+            <h1 data-placeholder="hero_title">
+                أكثر من مجرد قصة شعر، <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-purple-500">إنها الهوية الجديدة</span>
+            </h1>
+            <p class="text-lg text-neutral-400 max-w-2xl mx-auto leading-relaxed">
+                نحن في Casablanca Casablanca، ندمج الفن بالخبرة لنمنحك ستايل متناسق ونقي كيعبر على الشخصية ديالك، وسط فضاء مجهز بأحدث تكنولوجيا الراحة والعناية.
+            </p>
+        </div>
+    </section>
+
+    <section id="stats" class="max-w-screen-xl mx-auto px-4 py-12 relative z-10">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 bg-brand-card/40 border border-neutral-900 p-8 rounded-3xl backdrop-blur-md" data-aos="fade-up">
+            <div class="text-center border-l md:border-l border-neutral-800 last:border-0">
+                <h3 class="text-4xl font-extrabold text-white">+15,000</h3>
+                <p class="text-xs text-neutral-500 font-medium mt-2">زبون راضي</p>
+            </div>
+            <div class="text-center md:border-l border-neutral-800 last:border-0">
+                <h3 class="text-4xl font-extrabold text-brand-accent">5.0 / 5</h3>
+                <p class="text-xs text-neutral-500 font-medium mt-2">تقييم Google</p>
+            </div>
+            <div class="text-center border-l md:border-l border-neutral-800 last:border-0">
+                <h3 class="text-4xl font-extrabold text-white">12</h3>
+                <p class="text-xs text-neutral-500 font-medium mt-2">خبراء</p>
+            </div>
+            <div class="text-center">
+                <h3 class="text-4xl font-extrabold text-white">100%</h3>
+                <p class="text-xs text-neutral-500 font-medium mt-2">معقم 100%</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="max-w-screen-xl mx-auto px-4 py-16 relative z-10">
+        <h2 class="text-3xl font-black text-white mb-10 border-r-4 border-brand-accent pr-3">قص وتصفيف الشعر</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div data-aos="fade-up" data-aos-delay="100" class="bg-brand-card border border-neutral-900 rounded-3xl p-8 hover:border-brand-accent/25 transition-all group">
+                <div class="text-3xl mb-4">✂️</div>
+                <h3 class="text-xl font-bold text-white mb-2">قص وتصفيف الشعر</h3>
+                <p class="text-neutral-400 text-sm leading-relaxed">تحديد ونحت الشعر بطرق عصرية متناغمة مع شكل الرأس والوجه.</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200" class="bg-brand-card border border-neutral-900 rounded-3xl p-8 hover:border-brand-accent/25 transition-all group">
+                <div class="text-3xl mb-4">🧔</div>
+                <h3 class="text-xl font-bold text-white mb-2">تحديد اللحية</h3>
+                <p class="text-neutral-400 text-sm leading-relaxed">استخدام الفوطة الساخنة والموس الحاد مع ترطيب كامل بأرقى الزيوت.</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="300" class="bg-brand-card border border-neutral-900 rounded-3xl p-8 hover:border-brand-accent/25 transition-all group">
+                <div class="text-3xl mb-4">💆‍♂️</div>
+                <h3 class="text-xl font-bold text-white mb-2">عناية بالبشرة</h3>
+                <p class="text-neutral-400 text-sm leading-relaxed">حمام بخار متكامل وإزالة الرؤوس السوداء بـ ماسك الطين الأسود الفاخر.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="max-w-screen-xl mx-auto px-4 py-16 relative z-10">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-black text-white">أثمنة الخدمات والباقات</h2>
+            <p class="text-neutral-500 text-sm mt-2">اختار الباقة اللي كتناسبك مع الشفافية الكاملة ف الأثمنة</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div data-aos="fade-right" class="bg-brand-card border border-neutral-900 rounded-3xl p-8 flex flex-col justify-between">
+                <div>
+                    <h3 class="text-lg font-bold text-neutral-400">باقة العادي</h3>
+                    <div class="text-3xl font-black text-white my-4">100 درهم</div>
+                    <ul class="text-sm text-neutral-400 space-y-3 border-t border-neutral-900 pt-4">
+                        <li>• غسيل وقص الشعر الإحترافي</li>
+                        <li>• تصفيف بالـ Wax الفاخر</li>
+                        <li>• مشروب ساخن مجاني</li>
+                    </ul>
+                </div>
+                <button class="w-full bg-neutral-900 border border-neutral-800 text-white rounded-xl py-3 mt-6 hover:bg-neutral-800 transition-all">احجز هادي</button>
+            </div>
+            <div data-aos="fade-up" class="bg-brand-surface border-2 border-brand-accent rounded-3xl p-8 flex flex-col justify-between relative shadow-[0_0_40px_rgba(236,72,153,0.1)]">
+                <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-accent text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">الأكثر طلباً</span>
+                <div>
+                    <h3 class="text-lg font-bold text-brand-accent">باقة الـ VIP المتكاملة</h3>
+                    <div class="text-3xl font-black text-white my-4">250 درهم</div>
+                    <ul class="text-sm text-neutral-300 space-y-3 border-t border-neutral-800 pt-4">
+                        <li>• قص الشعر وتحديد اللحية بالفوطة الساخنة</li>
+                        <li>• ماسك تنظيف البشرة السريع</li>
+                        <li>• مساج خفيف للرأس والكتفين</li>
+                        <li>• استخدام منتجات VIP معقمة</li>
+                    </ul>
+                </div>
+                <button class="w-full bg-brand-accent text-white rounded-xl py-3 mt-6 hover:bg-pink-600 transition-all font-semibold">احجز باقة VIP</button>
+            </div>
+            <div data-aos="fade-left" class="bg-brand-card border border-neutral-900 rounded-3xl p-8 flex flex-col justify-between">
+                <div>
+                    <h3 class="text-lg font-bold text-neutral-400">باقة العريس / Luxury</h3>
+                    <div class="text-3xl font-black text-white my-4">500 درهم</div>
+                    <ul class="text-sm text-neutral-400 space-y-3 border-t border-neutral-900 pt-4">
+                        <li>• العناية الشاملة (شعر + لحية + بشرة)</li>
+                        <li>• باديكير ومانيكير سريع لليدين</li>
+                        <li>• بروتين مغذي ومنعم للشعر</li>
+                        <li>• مقعد خاص VIP معزول</li>
+                    </ul>
+                </div>
+                <button class="w-full bg-neutral-900 border border-neutral-800 text-white rounded-xl py-3 mt-6 hover:bg-neutral-800 transition-all">احجز هادي</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="max-w-screen-xl mx-auto px-4 py-16 relative z-10">
+        <h2 class="text-3xl font-black text-white mb-10 border-r-4 border-brand-accent pr-3">خبراء الحلاقة دياولنا</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="text-center group" data-aos="fade-up" data-aos-delay="100">
+                <div class="w-full h-64 bg-neutral-900 rounded-3xl border border-neutral-800 mb-4 overflow-hidden shadow-lg">
+                    <img data-editable="hero_image" src="assets/hero.jpg?v=1782437630774" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300">
+                </div>
+                <h4 class="text-lg font-bold text-white">أمين الإدريسي</h4>
+                <p class="text-xs text-brand-accent">Master Barber (خبير 8 سنوات)</p>
+            </div>
+            <div class="text-center group" data-aos="fade-up" data-aos-delay="200">
+                <div class="w-full h-64 bg-neutral-900 rounded-3xl border border-neutral-800 mb-4 overflow-hidden shadow-lg">
+                    <imhttps://images.unsplash.com/photo-1503951914875-57316270389b?auto=format&fit=crop&w=1600&h=900&q=80it=crop" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300">
+                </div>
+                <h4 class="text-lg font-bold text-white">عثمان كازا</h4>
+                <p class="text-xs text-brand-accent">خبير تحديد اللحية والـ Styling</p>
+            </div>
+            <div class="text-center group" data-aos="fade-up" data-aos-delay="300">
+                <div class="w-full h-64 bg-neutral-900 rounded-3xl border border-neutral-800 mb-4 overflow-hidden shadow-lg">
+                https://images.unsplash.com/photo-1622286342623-4fc325b37983?auto=format&fit=crop&w=1600&h=900&q=80ormat&fit=crop" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300">
+                </div>
+                <h4 class="text-lg font-bold text-white">المهدي الناصري</h4>
+                <p class="text-xs text-brand-accent">أخصائي العناية بالبشرة والـ Massage</p>
+            </div>
+            <div class="text-center group" data-aos="fade-up" data-aos-delay="400">
+                <div class="w-full h-64 bg-neutral-900 rounded-3xl border border-neutral-800 mb-4 overflow-hidden shadow-lg">
+         https://images.unsplash.com/photo-1599351431202-1e0ca2c6eaf4?auto=format&fit=crop&w=1600&h=900&q=80&auto=format&fit=crop" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300">
+                </div>
+                <h4 class="text-lg font-bold text-white">ياسين توب</h4>
+                <p class="text-xs text-brand-accent">خبير قصات الـ Hair Trends الحديثة</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="max-w-3xl mx-auto px-4 py-16 relative z-10" x-data="{ activeIndex: null }">
+        <h2 class="text-3xl font-black text-white text-center mb-10">الأسئلة الشائعة</h2>
+        
+        <div class="space-y-4">
+            <div class="bg-brand-card border border-neutral-900 rounded-2xl overflow-hidden">
+                <button @click="activeIndex = activeIndex === 1 ? null : 1" class="w-full p-5 text-right font-bold text-white flex justify-between items-center hover:bg-neutral-900/40">
+                    <span>واش كتحترموا المواعيد المحجوزة؟</span>
+                    <span class="text-brand-accent" x-text="activeIndex === 1 ? '−' : '+'">+</span>
+                </button>
+                <div x-show="activeIndex === 1" x-transition class="p-5 text-sm text-neutral-400 border-t border-neutral-900 bg-black/20">
+                    طبعاً! الوقت والراحة د الزبون هما الأولوية ديالنا. فاش كتحجز موعد، الكرسي كيكون واجد ومنتظر الدخول ديالك فـ الدقيقة المحددة بدون أي انتظار.
+                </div>
+            </div>
+
+            <div class="bg-brand-card border border-neutral-900 rounded-2xl overflow-hidden">
+                <button @click="activeIndex = activeIndex === 2 ? null : 2" class="w-full p-5 text-right font-bold text-white flex justify-between items-center hover:bg-neutral-900/40">
+                    <span>كيفاش كديروا لتعقيم الأدوات؟</span>
+                    <span class="text-brand-accent" x-text="activeIndex === 2 ? '−' : '+'">+</span>
+                </button>
+                <div x-show="activeIndex === 2" x-transition class="p-5 text-sm text-neutral-400 border-t border-neutral-900 bg-black/20">
+                    كل الأدوات والموس كيدوزو من جهاز التعقيم بالأشعة فوق البنفسجية (UV) ودرجات الحرارة العالية بعد كل زبون، والمناشف كتستعمل مرة واحدة فقط لكل شخص لضمان حماية كاملة.
+                </div>
+            </div>
+
+            <div class="bg-brand-card border border-neutral-900 rounded-2xl overflow-hidden">
+                <button @click="activeIndex = activeIndex === 3 ? null : 3" class="w-full p-5 text-right font-bold text-white flex justify-between items-center hover:bg-neutral-900/40">
+                    <span>فين كاين المحل بالضبط فـ الCasablanca؟</span>
+                    <span class="text-brand-accent" x-text="activeIndex === 3 ? '−' : '+'">+</span>
+                </button>
+                <div x-show="activeIndex === 3" x-transition class="p-5 text-sm text-neutral-400 border-t border-neutral-900 bg-black/20">
+                    المحل متواجد في قلب الCasablanca بCasablanca، على بعد دقيقة وحدة من الشارع الرئيسي، وكاين باركينغ متوفر وقريب وسهل للسيارات.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-12 border-t border-neutral-900 text-xs text-neutral-600 relative z-10">
+        Barber King • ALL RIGHTS RESERVED © 2026
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script>AOS.init({ once: true });</script>
+<script>(function(){
+  if (window.DRIPZONE_EDIT_MODE === true) return;
+  if (window.__dzProductionLockReady) return;
+  window.__dzProductionLockReady = true;
+
+  document.documentElement.classList.add('dz-production-mode');
+  document.body.classList.remove('dz-inline-edit-mode');
+
+  document.querySelectorAll('[contenteditable]').forEach(function(el){
+    el.removeAttribute('contenteditable');
+    el.removeAttribute('spellcheck');
+    el.classList.remove('dz-inline-editing');
+  });
+  document.querySelectorAll('[data-dz-inline-bound]').forEach(function(el){
+    el.removeAttribute('data-dz-inline-bound');
+  });
+
+  var css = document.createElement('style');
+  css.id = 'dz-production-lock';
+  css.textContent = [
+    'html.dz-production-mode,html.dz-production-mode body{overflow-x:hidden;scroll-behavior:smooth}',
+    'html.dz-production-mode [data-editable-token],html.dz-production-mode [data-placeholder]{',
+    '  outline:none!important;box-shadow:none!important;cursor:inherit;background:transparent!important}',
+    'html.dz-production-mode .dz-inline-editing{outline:none!important;background:transparent!important}',
+    'html.dz-production-mode [data-editable-token]:empty{display:none}',
+    'html.dz-production-mode a[href]{pointer-events:auto}'
+  ].join('');
+  if (!document.getElementById('dz-production-lock')) {
+    document.head.appendChild(css);
+  }
+})();</script></body>
+</html>
